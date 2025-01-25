@@ -1,3 +1,72 @@
-body{
-    background-color: pink;
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Светлый фон для всего сайта */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили боковой панели */
+aside {
+    background-color: #ffffff; /* Белый фон для боковой панели */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для панелей */
+}
+
+aside img {
+    border: 2px solid #007bff; /* Голубая рамка вокруг изображения */
+    padding: 4px;
+}
+
+aside h5 {
+    color: #333333; /* Темный текст для заголовка */
+    font-weight: bold;
+}
+
+aside .nav-link {
+    color: #007bff; /* Голубой текст ссылок */
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+aside .nav-link:hover {
+    background-color: #007bff; /* Голубой фон при наведении */
+    color: #ffffff; /* Белый текст при наведении */
+}
+
+/* Стили основного контента */
+main {
+    background-color: #ffffff; /* Белый фон для основного контента */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Тень для основного блока */
+}
+
+h1 {
+    color: #343a40; /* Темный цвет для заголовков */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #555555; /* Серый текст */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    aside {
+        width: 100%; /* Боковая панель занимает всю ширину на маленьких экранах */
+        box-shadow: none; /* Убираем тень на маленьких экранах */
+    }
+
+    aside img {
+        margin: 0 auto; /* Центрируем изображение */
+    }
+
+    main {
+        margin-top: 20px;
+    }
 }
