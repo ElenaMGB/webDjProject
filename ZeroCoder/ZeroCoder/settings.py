@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'news',
     'main',
+    'shedule',
     'homework',
     'django.contrib.admin',
     'django.contrib.auth',
