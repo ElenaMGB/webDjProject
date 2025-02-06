@@ -22,6 +22,7 @@ def new(request):
 
     # строка для 2-го урока
     return render (request, 'main/new.html')
+
 def program(request):
     return render (request, 'main/program.html')
 
@@ -30,7 +31,9 @@ def teacher(request):
 
 def lesson(request):
     return render (request, 'main/lesson.html')
+
 def event(request):
     return render (request, 'main/event.html')
+
 def forparents(request):
     return render (request, 'main/forparents.html')

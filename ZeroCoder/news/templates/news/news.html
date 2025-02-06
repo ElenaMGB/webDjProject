@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<h1>Это Новостная страница с подключением таблицы</h1>
+<h1>Новостная страница с подключением таблицы</h1>
+ <!--{{news}} #новости одной кривой строкой-->
 
 {% for new in news %}
 	<div>
-		<h3> {{ new.title }} </h3>
-		<p> {{ new.short_description }} </p>
+		<h3> {{new.pub_date}}    {{ new.title }} </h3>
+		<p> {{ new.short_description }} from {{ new.user_tell }}</p>
+		<p> {{ new.text }} </p>
 	</div>
 {% endfor %}
 
