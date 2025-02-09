@@ -9,3 +9,6 @@ def home(request):
     # return  render(request, 'main/new.html') #до подключения таблиц отсылка к пустой новостной странице
     # return render(request, 'news/news.html') #пока без контекста до подключения словаря и таблиц
     return render(request, 'news/news.html', {'news': news}) #+словарь для передачи информации в html-шаблон.
+
+def create_news(request):
+	return render(request, 'news/add_new_post.html')
