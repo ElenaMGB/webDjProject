@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Добавление новостей </title>
-</head>
-<body>
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+	<title>Добавление новостей</title>
+{% endblock %}
+
+{% block content %}
 <h1>Добавление новостей</h1>
-</body>
-</html>
+<div>
+    <h2> Форма для добавления новостей</h2>
+    <form method="post" >
+		<input type="text" placeholder="Заголовок новости"> <br>
+		<input type="text" placeholder="Краткое описание новости"> <br>
+		<textarea placeholder="Содержание новости"></textarea> <br>
+		<input type="date"> <br>
+		<input type="time"> <br>
+		<button type="submit">Добавить новость</button>
+	</form>
+</div>
+{% endblock %}
