@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import News_post
-
+from .forms import News_postForm
 
 # Create your views here.
 def home(request):
@@ -11,4 +11,7 @@ def home(request):
     return render(request, 'news/news.html', {'news': news}) #+словарь для передачи информации в html-шаблон.
 
 def create_news(request):
-	return render(request, 'news/add_new_post.html')
+	# return render(request, 'news/add_new_post.html') #для 1-го варианта создания форм
+# для 2го варианта через файл forms.py:
+    form = News_postForm()
+    return render(request, 'news/add_new_post.html', {'form': form})
