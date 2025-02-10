@@ -7,6 +7,7 @@
 {% block content %}
 <h1>Форма для добавления новостей</h1>
 {{ form }}
+<p>{{error}}</p>
 <div>
 <!--    <h2> Форма для добавления новостей</h2>-->
 <div class="container mt-5">
@@ -15,22 +16,27 @@
             <form method="post">
 <!--			избавляемся от ошибки CRSF-->
 				 {% csrf_token %}
+
                 <div class="mb-3">
                     <label class="form-label">Заголовок новости</label>
                     <input type="text" class="form-control" placeholder="Введите заголовок" required>
+					{{ form.title }}
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Краткое описание</label>
                     <input type="text" class="form-control" placeholder="Введите краткое описание" required>
+					{{ form.short_description }}
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Содержание</label>
                     <textarea class="form-control" rows="4" placeholder="Введите содержание новости" required></textarea>
+					{{ form.text }}
                 </div>
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
                         <label class="form-label">Дата</label>
                         <input type="date" class="form-control" required>
+						{{ form.date }}
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Время</label>
