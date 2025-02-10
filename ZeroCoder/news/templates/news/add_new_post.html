@@ -5,16 +5,41 @@
 {% endblock %}
 
 {% block content %}
-<h1>Добавление новостей</h1>
+<h1>Форма для добавления новостей</h1>
 <div>
-    <h2> Форма для добавления новостей</h2>
-    <form method="post" >
-		<input type="text" placeholder="Заголовок новости"> <br>
-		<input type="text" placeholder="Краткое описание новости"> <br>
-		<textarea placeholder="Содержание новости"></textarea> <br>
-		<input type="date"> <br>
-		<input type="time"> <br>
-		<button type="submit">Добавить новость</button>
-	</form>
+<!--    <h2> Форма для добавления новостей</h2>-->
+<div class="container mt-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="text-center mb-4">Добавить новость</h2>
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Заголовок новости</label>
+                    <input type="text" class="form-control" placeholder="Введите заголовок" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Краткое описание</label>
+                    <input type="text" class="form-control" placeholder="Введите краткое описание" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Содержание</label>
+                    <textarea class="form-control" rows="4" placeholder="Введите содержание новости" required></textarea>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Дата</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Время</label>
+                        <input type="time" class="form-control" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+            </form>
+        </div>
+    </div>
+
 </div>
 {% endblock %}
+
+<!--action указывает, куда будут перенаправляться данные, когда мы их отправим, и какая функция будет их обрабатывать. Можем указать action. Если его не указать, обрабатывать будет та же функция, которая открывает страницу.-->
